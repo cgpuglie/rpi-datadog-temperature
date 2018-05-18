@@ -27,13 +27,9 @@ dogapi.initialize({
 })
 
 // Basic utilities
-// Functionally throw errors
-function causeError(message) {
-  throw new Error(message)
-}
 // Basic logger function with timestamp
 function log({message, level='INFO'}) {
-  console.log(`[${(new Date()).toISOString()}] ${level}: ${message}`)
+  console.log(`${(new Date()).toISOString()} - [${level}]: ${message}`)
 }
 
 // parse file for raw num string
